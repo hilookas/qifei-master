@@ -1,0 +1,143 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qifei Master</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
+  <link href="/bootstrap.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Qifei Master</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <div class="card-header">
+          Control
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div class="control-button row row-cols-3 gy-2 gx-2">
+                <div class="col"></div>
+                <div class="col text-center"><button type="button" class="btn btn-outline-secondary" id="control-button-up">↑</button></div>
+                <div class="col"></div>
+                <div class="col text-center"><button type="button" class="btn btn-outline-secondary" id="control-button-left">←</button></div>
+                <div class="col text-center"><button type="button" class="btn btn-outline-secondary" id="control-button-down">↓</button></div>
+                <div class="col text-center"><button type="button" class="btn btn-outline-secondary" id="control-button-right">→</button></div>
+              </div>
+              <p class="text-muted mt-3" id="controller-info">Controller Supported</p>
+            </div>
+            <div class="col">
+              <label for="basic-url" class="form-label">Max Curv <span class="text-muted">0.1/m</span></label>
+              <input type="text" class="form-control mb-3" id="max-curv" aria-describedby="basic-addon3">
+              <label for="basic-url" class="form-label">Max Speed <span class="text-muted">cm/s</span></label>
+              <input type="text" class="form-control mb-3" id="max-speed" aria-describedby="basic-addon3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <div class="card-header">
+          Speed Chart
+        </div>
+        <div class="card-body">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+        <div class="card-header">
+          Camera
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12">
+              <canvas id="cam-output"></canvas>
+            </div>
+            <div class="col-12 mt-3">
+              <div class="row">
+                <div class="col-auto">
+                  <button type="button" class="btn btn-outline-secondary" id="cam-shot">T</button>
+                </div>
+                <div class="col-auto">
+                  <input type="text" class="form-control" id="cam-name" placeholder="name...">
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-outline-secondary" id="cam-save">S</button>
+                  <button type="button" class="btn btn-outline-secondary" id="cam-download">D</button>
+                  <button type="button" class="btn btn-outline-secondary" id="cam-load">L</button>
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-outline-secondary" id="cam-shot-name-save-download">TNSD</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-lg-8 mb-4">
+      <div class="card">
+        <div class="card-header">
+          Console
+        </div>
+        <div class="card-body">
+          <textarea class="form-control mb-1" id="console-output" aria-label="With textarea" disabled></textarea>
+          <input type="text" class="form-control" id="console-input" placeholder="command...">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-lg-4 mb-2">
+      <div class="card">
+        <div class="card-header">
+          Help
+        </div>
+        <div class="card-body">
+          <p>no help here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</main>
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> -->
+<script src="/bootstrap.bundle.js"></script>
+<!-- <script src="https://cdn.socket.io/4.0.1/socket.io.min.js" integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU" crossorigin="anonymous"></script> -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="/FileSaver.js"></script>
+<script src="/script.js"></script>
+</body>
+</html>

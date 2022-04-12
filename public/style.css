@@ -1,0 +1,27 @@
+/* Show it's not fixed to the top */
+body {
+  min-height: 40rem;
+}
+
+.control-button {
+  width: 9rem;
+}
+
+.message {
+  width: 200px;
+  height: 100px;
+  border: solid;
+}
+
+#console-output {
+  height: 20rem;
+  background-color: #ffffff;
+}
+
+#console-input, #console-output {
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+}
+
+#cam-output {
+  image-rendering: pixelated; 
+}

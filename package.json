@@ -1,0 +1,19 @@
+{
+  "name": "qifei-rc-car-controller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "express": "^4.17.1",
+    "file-saver": "^2.0.5",
+    "serialport": "^9.0.7",
+    "socket.io": "^4.0.1",
+    "xterm": "^4.12.0"
+  }
+}
